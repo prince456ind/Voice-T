@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🎙️ English → Hindi Voice Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎙️ English → Hindi Voice Translator</h1>
+        <p class="status">Status: <span id="status">Idle</span></p>
+
+        <div class="box">
+            <h3>👤 You said (English):</h3>
+            <div id="english" class="output">—</div>
+        </div>
+
+        <div class="box">
+            <h3>🇮🇳 Translation (Hindi):</h3>
+            <div id="hindi" class="output">—</div>
+        </div>
+
+        <div class="buttons">
+            <button id="startBtn" onclick="startApp()">▶️ ON (Start)</button>
+            <button id="stopBtn" onclick="stopApp()" disabled>⏹️ OFF (Stop)</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
